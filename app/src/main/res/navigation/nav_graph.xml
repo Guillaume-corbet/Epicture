@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.epicture.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+        <argument
+            android:name="access_token"
+            app:argType="string" />
+        <argument
+            android:name="account_username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/UploadFragment"
+        android:name="com.example.epicture.UploadFragment"
+        android:label="@string/uploadfragment"
+        tools:layout="@layout/upload_fragment">
+        <argument
+            android:name="access_token"
+            app:argType="string" />
+        <argument
+            android:name="account_username"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.epicture.HomeFragment"
+        android:label="@string/home_screen"
+        tools:layout="@layout/home_fragment">
+
+        <argument
+            android:name="access_token"
+            app:argType="string" />
+        <argument
+            android:name="account_username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/ProfilFragment"
+        android:name="com.example.epicture.ProfileFragment"
+        android:label="ProfilFragment" >
+        <argument
+            android:name="access_token"
+            app:argType="string" />
+        <argument
+            android:name="account_username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="com.example.epicture.SearchFragment"
+        android:label="SearchFragment" >
+        <argument
+            android:name="access_token"
+            app:argType="string" />
+        <argument
+            android:name="account_username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorisFragment"
+        android:name="com.example.epicture.FavorisFragment"
+        android:label="FavorisFragment" >
+    <argument
+        android:name="access_token"
+        app:argType="string" />
+    <argument
+        android:name="account_username"
+        app:argType="string" />
+    </fragment>
+</navigation>
